@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/NashW/IdeaProjects/Test/src">
+        <classes>
+
+            <!--Class 1-->
+            <class name="class_1">
+                <methods>
+                    <include
+                            name="Test_1">
+                    </include>
+                    <include
+                            name="Test_2">
+                    </include>
+                    <include
+                            name="Test_3">
+                    </include>
+                    <include
+                            name="Test_4">
+                    </include>
+                    <include
+                            name="Test_5">
+                    </include>
+
+                </methods>
+            </class>
+
+            <!--Class 2-->
+            <class name="class_2">
+                <methods>
+                    <include
+                            name="Test_1">
+                    </include>
+                    <include
+                            name="Test_2">
+                    </include>
+                    <include
+                            name="Test_3">
+                    </include>
+                    <include
+                            name="Test_4">
+                    </include>
+                    <include
+                            name="Test_5">
+                    </include>
+                </methods>
+            </class>
+
+            <!--Class 3-->
+            <class
+                    name="count_vars">
+            </class>
+
+        </classes>
+    </test>
+</suite>
