@@ -11,18 +11,18 @@ import org.openqa.selenium.WebDriver;
 //TestNG hierarchy: Test Suite -> Test -> Class -> Method
 
 public class class_8 {
+
+
     WebDriver driver;
 
+    //Function occurs before the entire class.
     @BeforeClass
-    public void beforeClass() {
-        System.out.println("before Class");
-
-    }
+    public void beforeClass() { System.out.println("Starting Test For Class [" + (++count_vars.class_Count) + "]"); }
 
     //Occurs before every 'method' annotated with @Test, every single one
     @BeforeMethod
     public void beforeMethod() {
-        System.out.println("Before Method");
+        System.out.println("Initializing Method: [" + ( ++count_vars.method_Count ) + "]" );
         System.setProperty("webdriver.firefox.driver", "C://Program Files/Java/firefox-driver/geckodriver.exe");
         driver = new FirefoxDriver();
     }
@@ -32,14 +32,13 @@ public class class_8 {
     //Occurs after every 'method' annotated with @Test, every single one
     @AfterMethod
     public void afterMethod() {
-
-        System.out.println("Method [" + (++count_vars.method_Count) + "]: Complete");
+        System.out.println("Method [" + ( count_vars.method_Count ) + "]: Complete");
         //This should close our driver before the next round
         driver.close();
     }
 
     @AfterClass
-    public void afterClass() {System.out.println("Class [" + (++count_vars.class_Count) + "]: Complete");}
+    public void afterClass() { System.out.println("Class [" + ( count_vars.class_Count ) + "]: Complete"); }
 
 
     @Test(priority = 1)

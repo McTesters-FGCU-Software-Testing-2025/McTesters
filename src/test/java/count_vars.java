@@ -4,5 +4,4 @@ public class count_vars {
     public static int method_Count;
 
     public static int class_Count;
-
 }
