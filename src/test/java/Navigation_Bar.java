@@ -101,18 +101,47 @@ public class Navigation_Bar {
 
     @Test(priority = 4)
     public void McValue() throws InterruptedException {
-
-        System.out.println("Hello World_4");
+        //System.out.println("Hello World_4");
+        driver.get("https://www.mcdonalds.com/us/en-us.html");
+        driver.manage().window().maximize();
         Thread.sleep(3000);
 
+        WebElement mcValue = driver.findElement(By.linkText("McValue™ & Deals"));
+        mcValue.click();
+        Thread.sleep(3000);
 
+        WebElement mcOrder = driver.findElement(By.linkText("Order in the App"));
+        mcOrder.click();
+        Thread.sleep(3000);
+        driver.navigate().back();
     }
 
     @Test(priority = 5)
-    public void Test_5() throws InterruptedException {
-
-        System.out.println("Hello World_5");
+    public void About_Food() throws InterruptedException {
+        //System.out.println("Hello World_5");
+        driver.get("https://www.mcdonalds.com/us/en-us.html");
         Thread.sleep(3000);
+
+        WebElement about_food = driver.findElement(By.linkText("About Our Food"));
+        about_food.click();
+        Thread.sleep(3000);
+
+        WebElement food_info = driver.findElement(By.id("teaser-b5c2f7926b"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", food_info);
+        Thread.sleep(3000);
+
+        driver.findElement(By.linkText("Learn More About Our Quality")).click();
+        Thread.sleep(3000);
+
+        WebElement learn_more = driver.findElement(By.className("cmp-teaser__content"));
+        js.executeScript("arguments[0].scrollIntoView(true);", learn_more);
+        Thread.sleep(2000);
+        driver.manage().window().maximize();
+        Thread.sleep(3000);
+
+
+
 
 
     }
