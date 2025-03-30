@@ -18,10 +18,10 @@
                             name="McRewards">
                     </include>
                     <include
-                            name="Test_4">
+                            name="McValue">
                     </include>
                     <include
-                            name="Test_5">
+                            name="About_Food">
                     </include>
 
                 </methods>
