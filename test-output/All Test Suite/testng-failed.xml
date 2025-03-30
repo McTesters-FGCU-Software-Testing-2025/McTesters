@@ -3,7 +3,7 @@
 <suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="C:/Users/NashW/IdeaProjects/Test/src(failed)">
     <classes>
-      <class name="class_2">
+      <class name="Dropdown_Mac_Menu">
         <methods>
           <include name="Test_2"/>
           <include name="afterMethod"/>
@@ -14,7 +14,7 @@
           <include name="Test_5"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- class_2 -->
+      </class> <!-- Dropdown_Mac_Menu -->
     </classes>
   </test> <!-- C:/Users/NashW/IdeaProjects/Test/src(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
