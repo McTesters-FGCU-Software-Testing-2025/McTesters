@@ -2,56 +2,61 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/NashW/IdeaProjects/Test/src">
-        <classes>
 
+                                                <!--Comment out the areas to test your classes so you're not waiting-->
+        <classes>
             <!--Class 1-->
-            <class name="class_1">
+            <class name="Main_Navigation_Bar">
                 <methods>
                     <include
-                            name="Test_1">
-                    </include>
-                    <include
-                            name="Test_2">
-                    </include>
-                    <include
-                            name="Test_3">
-                    </include>
-                    <include
-                            name="Test_4">
-                    </include>
-                    <include
-                            name="Test_5">
+                            name="menu_dropdown">
                     </include>
 
+                    <include
+                            name="Mc_App_Link">
+                    </include>
+                    <include
+                            name="McRewards">
+                    </include>
+                    <include
+                            name="McValueDeals">
+                    </include>
+                    <include
+                            name="About_Food">
+                    </include>
+                    <include
+                            name="McDelivery">
+                    </include>
+                    <include
+                            name="McGiftCard">
+                    </include>
                 </methods>
             </class>
 
             <!--Class 2-->
-            <class name="class_2">
-                <methods>
-                    <include
-                            name="Test_1">
-                    </include>
-                    <include
-                            name="Test_2">
-                    </include>
-                    <include
-                            name="Test_3">
-                    </include>
-                    <include
-                            name="Test_4">
-                    </include>
-                    <include
-                            name="Test_5">
-                    </include>
-                </methods>
-            </class>
-
-            <!--Class 3-->
+            <class name="Dropdown_Mc_Menu">
+                          <methods>
+                              <include
+                                      name="Test_1">
+                              </include>
+                              <include
+                                      name="Test_2">
+                              </include>
+                              <include
+                                      name="Test_3">
+                              </include>
+                              <include
+                                      name="Test_4">
+                              </include>
+                              <include
+                                      name="Test_5">
+                              </include>
+                          </methods>
+                      </class>
+            <!--Class Variable Counters-->
             <class
                     name="count_vars">
             </class>
-
         </classes>
     </test>
 </suite>
