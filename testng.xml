@@ -5,16 +5,17 @@
         <classes>
 
             <!--Class 1-->
-            <class name="class_1">
+            <class name="Navigation_Bar">
                 <methods>
                     <include
-                            name="Test_1">
+                            name="menu_dropdown">
+                    </include>
+
+                    <include
+                            name="mac_App_Link">
                     </include>
                     <include
-                            name="Test_2">
-                    </include>
-                    <include
-                            name="Test_3">
+                            name="McRewards">
                     </include>
                     <include
                             name="Test_4">
@@ -27,26 +28,25 @@
             </class>
 
             <!--Class 2-->
-            <class name="class_2">
-                <methods>
-                    <include
-                            name="Test_1">
-                    </include>
-                    <include
-                            name="Test_2">
-                    </include>
-                    <include
-                            name="Test_3">
-                    </include>
-                    <include
-                            name="Test_4">
-                    </include>
-                    <include
-                            name="Test_5">
-                    </include>
-                </methods>
-            </class>
-
+            <!--<class name="Dropdown_Mac_Menu">
+                          <methods>
+                              <include
+                                      name="Test_1">
+                              </include>
+                              <include
+                                      name="Test_2">
+                              </include>
+                              <include
+                                      name="Test_3">
+                              </include>
+                              <include
+                                      name="Test_4">
+                              </include>
+                              <include
+                                      name="Test_5">
+                              </include>
+                          </methods>
+                      </class> -->
             <!--Class 3-->
             <class
                     name="count_vars">
