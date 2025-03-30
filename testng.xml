@@ -19,6 +19,12 @@
                             name="McRewards">
                     </include>
                     <include
+<<<<<<< HEAD
+                            name="McValue">
+                    </include>
+                    <include
+                            name="About_Food">
+=======
                             name="McValueDeals">
                     </include>
                     <include
@@ -29,6 +35,7 @@
                     </include>
                     <include
                             name="McGiftCard">
+>>>>>>> 8f9552a25eacfbfc39e1503563acd7141a6e4acc
                     </include>
                 </methods>
             </class>
