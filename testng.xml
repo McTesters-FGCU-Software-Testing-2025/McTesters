@@ -19,12 +19,12 @@
                             name="McRewards">
                     </include>
                     <include
-<<<<<<< HEAD
                             name="McValue">
                     </include>
                     <include
                             name="About_Food">
-=======
+                    </include>
+                    <include
                             name="McValueDeals">
                     </include>
                     <include
