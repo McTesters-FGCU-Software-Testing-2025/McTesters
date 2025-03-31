@@ -4,8 +4,12 @@
     <test verbose="2" preserve-order="true" name="C:/Users/NashW/IdeaProjects/Test/src">
 
                                                 <!--Comment out the areas to test your classes so you're not waiting-->
+
         <classes>
-            <!--Class 1-->
+
+            <!--
+
+            <!-Class 1
             <class name="Main_Navigation_Bar">
                 <methods>
                     <include
@@ -33,26 +37,49 @@
                 </methods>
             </class>
 
-            <!--Class 2-->
+            <!-Class 2
             <class name="Dropdown_Mc_Menu">
                           <methods>
                               <include
-                                      name="Test_1">
+                                      name="McValue">
                               </include>
                               <include
-                                      name="Test_2">
+                                      name="Breakfast">
                               </include>
                               <include
-                                      name="Test_3">
+                                      name="Beverages">
                               </include>
                               <include
-                                      name="Test_4">
+                                      name="Happy_Meal">
                               </include>
                               <include
-                                      name="Test_5">
+                                      name="SweetTreats">
                               </include>
                           </methods>
                       </class>
+            -->
+            <!--Class 3-->
+            <class name="Website_Statistics">
+                <methods>
+                    <include
+                            name="total_Elements">
+                    </include>
+                    <include
+                            name="currentURL">
+                    </include>
+                    <include
+                            name="">
+                    </include>
+                    <include
+                            name="">
+                    </include>
+                    <include
+                            name="">
+                    </include>
+
+                </methods>
+            </class>
+
             <!--Class Variable Counters-->
             <class
                     name="count_vars">
