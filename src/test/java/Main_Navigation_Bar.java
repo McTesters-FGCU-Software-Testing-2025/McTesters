@@ -45,11 +45,17 @@ public class Main_Navigation_Bar {
     @AfterClass
     public void afterClass() { System.out.println("Class [" + ( count_vars.class_Count ) + "]: Complete"); }
 
+    public void getURL() throws InterruptedException {
+        driver.get("https://www.mcdonalds.com/us/en-us.html");
+        driver.manage().window().maximize();
+        Thread.sleep(3000);
+    }
+
     @Test (priority = 1, groups = "Main Navigation Bar")
     public void menu_dropdown() throws InterruptedException {
         //System.out.println("Hello World_1");
-        driver.get("https://www.mcdonalds.com/us/en-us.html");
-        Thread.sleep(3000);
+        //Gets URL & Maximizes Window
+        getURL();
         WebElement menu = driver.findElement(By.cssSelector(".cmp-global-header__primary-nav > div:nth-child(1) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(1)"));
         menu.click();
         Thread.sleep(3000);
@@ -59,9 +65,9 @@ public class Main_Navigation_Bar {
 
     @Test (priority = 2, groups = "Main Navigation Bar")
     public void Mc_App_Link() throws InterruptedException {
-        driver.get("https://www.mcdonalds.com/us/en-us.html");
-        Thread.sleep(3000);
 
+        //Gets URL & Maximizes Window
+        getURL();
         WebElement app_link = driver.findElement(By.cssSelector(".cmp-global-header__primary-nav > div:nth-child(1) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)"));
         app_link.click();
         Thread.sleep(3000);
@@ -77,9 +83,9 @@ public class Main_Navigation_Bar {
     @Test (priority = 3, groups = "Main Navigation Bar")
     public void McRewards() throws InterruptedException {
         //System.out.println("Hello World_3");
-        driver.get("https://www.mcdonalds.com/us/en-us.html");
-        driver.manage().window().maximize();
-        Thread.sleep(3000);
+
+        //Gets URL & Maximizes Window
+        getURL();
 
         WebElement rewards = driver.findElement(By.linkText("MyMcDonald's Rewards"));
         rewards.click();
@@ -102,9 +108,10 @@ public class Main_Navigation_Bar {
     @Test (priority = 4, groups = "Main Navigation Bar")
     public void McValueDeals() throws InterruptedException {
         //System.out.println("Hello World_4");
-        driver.get("https://www.mcdonalds.com/us/en-us.html");
-        driver.manage().window().maximize();
-        Thread.sleep(3000);
+
+        //Gets URL & Maximizes Window
+        getURL();
+
 
         WebElement mcValue = driver.findElement(By.linkText("McValue™ & Deals"));
         mcValue.click();
@@ -119,8 +126,10 @@ public class Main_Navigation_Bar {
     @Test (priority = 5, groups = "Main Navigation Bar")
     public void About_Food() throws InterruptedException {
         //System.out.println("Hello World_5");
-        driver.get("https://www.mcdonalds.com/us/en-us.html");
-        Thread.sleep(3000);
+
+        //Gets URL & Maximizes Window
+        getURL();
+
 
         WebElement about_food = driver.findElement(By.linkText("About Our Food"));
         about_food.click();
@@ -146,9 +155,9 @@ public class Main_Navigation_Bar {
 
     @Test (priority = 6, groups = "Main Navigation Bar")
     public void McDelivery() throws InterruptedException {
-        driver.get("https://www.mcdonalds.com/us/en-us.html");
-        driver.manage().window().maximize();
-        Thread.sleep(3000);
+
+        //Gets URL & Maximizes Window
+        getURL();
 
         WebElement mcDelivery = driver.findElement(By.linkText("McDelivery®"));
         mcDelivery.click();
