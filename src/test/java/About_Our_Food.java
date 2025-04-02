@@ -71,15 +71,22 @@ public class About_Our_Food {
 
 
     @Test(priority = 2)
-    public void Test_2() throws InterruptedException {
+    public void food() throws InterruptedException {
+        //Initializing the about_Our_Food function to ensure proper page is loaded
         about_Our_Food();
-
-
+        //Scrolling down the page
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,1500)");
+        Thread.sleep(3000);
+        //Locating and selecting desired button
+        WebElement learn_about_food = driver.findElement(By.linkText("Learn More About Our Ingredients"));
+        learn_about_food.click();
+        Thread.sleep(3000);
 
     }
 
     @Test(priority = 3)
-    public void Test_3() throws InterruptedException {
+    public void food_Philosophy() throws InterruptedException {
         about_Our_Food();
 
 
