@@ -105,7 +105,7 @@ public class Gift_Cards {
     }
 
     @Test(priority = 4)
-    public void Test_4() throws InterruptedException {
+    public void reload_your_card() throws InterruptedException {
 
         //Initializing the gift card function to ensure we open proper window
         gift_Cards();
@@ -114,8 +114,8 @@ public class Gift_Cards {
         js.executeScript("window.scrollBy(0,500)");
         Thread.sleep(3000);
         //Searching for and selecting desired button
-        WebElement arch_Card = driver.findElement(By.linkText("Buy an Arch Card"));
-        arch_Card.click();
+        WebElement reload = driver.findElement(By.linkText("Reload Your Card"));
+        reload.click();
         Thread.sleep(3000);
 
 
