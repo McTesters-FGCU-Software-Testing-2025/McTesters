@@ -69,9 +69,18 @@ public class Gift_Cards {
 
 
     @Test(priority = 2)
-    public void Test_2() throws InterruptedException {
+    public void bulk() throws InterruptedException {
 
+        //Initializing the gift card function to ensure we open proper window
         gift_Cards();
+        //Scrolling down
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
+        Thread.sleep(3000);
+        //Searching for and selecting desired button
+        WebElement in_bulk = driver.findElement(By.linkText("Buy in Bulk"));
+        in_bulk.click();
+        Thread.sleep(3000);
 
 
 
@@ -80,7 +89,16 @@ public class Gift_Cards {
     @Test(priority = 3)
     public void Test_3() throws InterruptedException {
 
+        //Initializing the gift card function to ensure we open proper window
         gift_Cards();
+        //Scrolling down
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
+        Thread.sleep(3000);
+        //Searching for and selecting desired button
+        WebElement arch_Card = driver.findElement(By.linkText("Buy an Arch Card"));
+        arch_Card.click();
+        Thread.sleep(3000);
 
 
 
@@ -89,7 +107,16 @@ public class Gift_Cards {
     @Test(priority = 4)
     public void Test_4() throws InterruptedException {
 
+        //Initializing the gift card function to ensure we open proper window
         gift_Cards();
+        //Scrolling down
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
+        Thread.sleep(3000);
+        //Searching for and selecting desired button
+        WebElement arch_Card = driver.findElement(By.linkText("Buy an Arch Card"));
+        arch_Card.click();
+        Thread.sleep(3000);
 
 
     }
@@ -97,7 +124,16 @@ public class Gift_Cards {
     @Test(priority = 5)
     public void Test_5() throws InterruptedException {
 
+        //Initializing the gift card function to ensure we open proper window
         gift_Cards();
+        //Scrolling down
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
+        Thread.sleep(3000);
+        //Searching for and selecting desired button
+        WebElement arch_Card = driver.findElement(By.linkText("Buy an Arch Card"));
+        arch_Card.click();
+        Thread.sleep(3000);
 
 
     }
