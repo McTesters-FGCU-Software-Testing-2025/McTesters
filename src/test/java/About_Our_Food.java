@@ -1,3 +1,5 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -42,11 +44,16 @@ public class About_Our_Food {
     @AfterClass
     public void afterClass() { System.out.println("Class [" + ( count_vars.class_Count ) + "]: Complete"); }
 
+    //Automatically brings up our desired menu
+    public void about_Our_Food() throws InterruptedException {
+        WebElement aboutOurFood = driver.findElement(By.linkText("About Our Food"));
+        aboutOurFood.click();
+        Thread.sleep(3000);
+    }
+
     @Test(priority = 1)
     public void Test_1() throws InterruptedException {
-        System.out.println("Hello World_1");
-        driver.get("https://www.mcdonalds.com/us/en-us.html");
-        Thread.sleep(3000);
+        about_Our_Food();
 
     }
 
@@ -54,9 +61,7 @@ public class About_Our_Food {
 
     @Test(priority = 2)
     public void Test_2() throws InterruptedException {
-
-        System.out.println("Hello World_2");
-        Thread.sleep(3000);
+        about_Our_Food();
 
 
 
@@ -64,9 +69,7 @@ public class About_Our_Food {
 
     @Test(priority = 3)
     public void Test_3() throws InterruptedException {
-
-        System.out.println("Hello World_3");
-        Thread.sleep(3000);
+        about_Our_Food();
 
 
 
@@ -74,18 +77,14 @@ public class About_Our_Food {
 
     @Test(priority = 4)
     public void Test_4() throws InterruptedException {
-
-        System.out.println("Hello World_4");
-        Thread.sleep(3000);
+        about_Our_Food();
 
 
     }
 
     @Test(priority = 5)
     public void Test_5() throws InterruptedException {
-
-        System.out.println("Hello World_5");
-        Thread.sleep(3000);
+        about_Our_Food();
 
 
     }
