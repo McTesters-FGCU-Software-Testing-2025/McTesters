@@ -103,8 +103,17 @@ public class About_Our_Food {
     }
 
     @Test(priority = 4)
-    public void Test_4() throws InterruptedException {
+    public void nutrition_Calculator() throws InterruptedException {
+        //Initializing the about_Our_Food function to ensure proper page is loaded
         about_Our_Food();
+        //Scrolling down the page
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,2000)");
+        Thread.sleep(3000);
+        //Locating and selecting desired button
+        WebElement nutritionCalculator = driver.findElement(By.cssSelector("a.cmp-teaser__action-link[href='/us/en-us/about-our-food/nutrition-calculator.html']"));
+        nutritionCalculator.click();
+        Thread.sleep(3000);
 
 
     }
