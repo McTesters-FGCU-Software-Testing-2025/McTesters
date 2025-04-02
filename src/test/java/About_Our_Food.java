@@ -87,7 +87,16 @@ public class About_Our_Food {
 
     @Test(priority = 3)
     public void food_Philosophy() throws InterruptedException {
+        //Initializing the about_Our_Food function to ensure proper page is loaded
         about_Our_Food();
+        //Scrolling down the page
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,2000)");
+        Thread.sleep(3000);
+        //Locating and selecting desired button
+        WebElement foodPhilosophy = driver.findElement(By.cssSelector("a.cmp-teaser__action-link[href='/us/en-us/about-our-food/our-food-philosophy.html']"));
+        foodPhilosophy.click();
+        Thread.sleep(3000);
 
 
 
