@@ -45,7 +45,7 @@ public class Gift_Cards {
     @AfterClass
     public void afterClass() { System.out.println("Class [" + ( count_vars.class_Count ) + "]: Complete"); }
 
-    //Automatically Brings up our dropdown menu
+    //Automatically Brings up our desired menu
     public void gift_Cards() throws InterruptedException {
         WebElement giftCard = driver.findElement(By.linkText("Gift Cards"));
         giftCard.click();

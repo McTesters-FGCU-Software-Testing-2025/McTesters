@@ -1,4 +1,6 @@
+import com.fasterxml.jackson.annotation.JsonValue;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
 import org.testng.annotations.Test;
@@ -52,8 +54,17 @@ public class About_Our_Food {
     }
 
     @Test(priority = 1)
-    public void Test_1() throws InterruptedException {
+    public void quality() throws InterruptedException {
+        //Initializing the about_Our_Food function to ensure proper page is loaded
         about_Our_Food();
+        //Scrolling down the page
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,1500)");
+        Thread.sleep(3000);
+        //Locating and selecting desired button
+        WebElement learn_about_quality = driver.findElement(By.linkText("Learn More About Our Quality"));
+        learn_about_quality.click();
+        Thread.sleep(3000);
 
     }
 
