@@ -10,7 +10,8 @@ import org.openqa.selenium.WebDriver;
 
 //TestNG hierarchy: Test Suite -> Test -> Class -> Method
 
-public class class_6 {
+public class Find_Your_Restaurant {
+
 
     WebDriver driver;
 
@@ -38,6 +39,7 @@ public class class_6 {
 
     @AfterClass
     public void afterClass() { System.out.println("Class [" + ( count_vars.class_Count ) + "]: Complete"); }
+
 
     @Test(priority = 1)
     public void Test_1() throws InterruptedException {
@@ -89,4 +91,3 @@ public class class_6 {
 
 
 }
-
