@@ -75,7 +75,7 @@ public class Gift_Cards {
         gift_Cards();
         //Scrolling down
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,500)");
+        js.executeScript("window.scrollBy(0,700)");
         Thread.sleep(3000);
         //Searching for and selecting desired button
         WebElement in_bulk = driver.findElement(By.linkText("Buy in Bulk"));
@@ -87,17 +87,17 @@ public class Gift_Cards {
     }
 
     @Test(priority = 3)
-    public void Test_3() throws InterruptedException {
+    public void balance() throws InterruptedException {
 
         //Initializing the gift card function to ensure we open proper window
         gift_Cards();
         //Scrolling down
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,500)");
+        js.executeScript("window.scrollBy(0,1000)");
         Thread.sleep(3000);
         //Searching for and selecting desired button
-        WebElement arch_Card = driver.findElement(By.linkText("Buy an Arch Card"));
-        arch_Card.click();
+        WebElement check_balance = driver.findElement(By.linkText("Check Your Balance"));
+        check_balance.click();
         Thread.sleep(3000);
 
 
