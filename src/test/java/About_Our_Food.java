@@ -119,8 +119,17 @@ public class About_Our_Food {
     }
 
     @Test(priority = 5)
-    public void Test_5() throws InterruptedException {
+    public void food_Experts() throws InterruptedException {
+        //Initializing the about_Our_Food function to ensure proper page is loaded
         about_Our_Food();
+        //Scrolling down the page
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,2000)");
+        Thread.sleep(3000);
+        //Locating and selecting desired button
+        WebElement foodExperts = driver.findElement(By.cssSelector("a.cmp-teaser__action-link[href='/us/en-us/about-our-food/meet-our-food-experts.html']"));
+        foodExperts.click();
+        Thread.sleep(3000);
 
 
     }
