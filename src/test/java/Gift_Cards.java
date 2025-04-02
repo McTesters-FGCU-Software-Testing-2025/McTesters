@@ -1,3 +1,6 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.*;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -10,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 
 //TestNG hierarchy: Test Suite -> Test -> Class -> Method
 
-public class class_3 {
+public class Gift_Cards {
 
 
     WebDriver driver;
@@ -25,6 +28,8 @@ public class class_3 {
         System.out.println("Initializing Method: [" + ( ++count_vars.method_Count ) + "]" );
         System.setProperty("webdriver.firefox.driver", "C://Program Files/Java/firefox-driver/geckodriver.exe");
         driver = new FirefoxDriver();
+        driver.get("https://www.mcdonalds.com/us/en-us.html");
+        driver.manage().window().maximize();
     }
 
     //System.out.println("Method [" + (++method_Count) + "]: Complete");
@@ -40,12 +45,25 @@ public class class_3 {
     @AfterClass
     public void afterClass() { System.out.println("Class [" + ( count_vars.class_Count ) + "]: Complete"); }
 
+    //Automatically Brings up our dropdown menu
+    public void gift_Cards() throws InterruptedException {
+        WebElement giftCard = driver.findElement(By.linkText("Gift Cards"));
+        giftCard.click();
+        Thread.sleep(3000);
+    }
+
     @Test(priority = 1)
     public void Test_1() throws InterruptedException {
-        System.out.println("Hello World_1");
-        driver.get("https://www.mcdonalds.com/us/en-us.html");
+        //Initializing the gift card function to ensure we open proper window
+        gift_Cards();
+        //Scrolling down
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
         Thread.sleep(3000);
-
+        //Searching for and selecting desired button
+        WebElement arch_Card = driver.findElement(By.linkText("Buy an Arch Card"));
+        arch_Card.click();
+        Thread.sleep(3000);
     }
 
 
@@ -53,8 +71,7 @@ public class class_3 {
     @Test(priority = 2)
     public void Test_2() throws InterruptedException {
 
-        System.out.println("Hello World_2");
-        Thread.sleep(3000);
+        gift_Cards();
 
 
 
@@ -63,8 +80,7 @@ public class class_3 {
     @Test(priority = 3)
     public void Test_3() throws InterruptedException {
 
-        System.out.println("Hello World_3");
-        Thread.sleep(3000);
+        gift_Cards();
 
 
 
@@ -73,8 +89,7 @@ public class class_3 {
     @Test(priority = 4)
     public void Test_4() throws InterruptedException {
 
-        System.out.println("Hello World_4");
-        Thread.sleep(3000);
+        gift_Cards();
 
 
     }
@@ -82,8 +97,7 @@ public class class_3 {
     @Test(priority = 5)
     public void Test_5() throws InterruptedException {
 
-        System.out.println("Hello World_5");
-        Thread.sleep(3000);
+        gift_Cards();
 
 
     }

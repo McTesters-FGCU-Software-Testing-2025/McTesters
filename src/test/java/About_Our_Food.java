@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 
 //TestNG hierarchy: Test Suite -> Test -> Class -> Method
 
-public class class_4 {
+public class About_Our_Food {
 
 
     WebDriver driver;
@@ -25,6 +25,8 @@ public class class_4 {
         System.out.println("Initializing Method: [" + ( ++count_vars.method_Count ) + "]" );
         System.setProperty("webdriver.firefox.driver", "C://Program Files/Java/firefox-driver/geckodriver.exe");
         driver = new FirefoxDriver();
+        driver.get("https://www.mcdonalds.com/us/en-us.html");
+        driver.manage().window().maximize();
     }
 
     //System.out.println("Method [" + (++method_Count) + "]: Complete");
