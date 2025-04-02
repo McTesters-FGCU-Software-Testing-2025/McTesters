@@ -93,7 +93,7 @@ public class Gift_Cards {
         gift_Cards();
         //Scrolling down
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,1000)");
+        js.executeScript("window.scrollBy(0,1100)");
         Thread.sleep(3000);
         //Searching for and selecting desired button
         WebElement check_balance = driver.findElement(By.linkText("Check Your Balance"));
@@ -111,7 +111,7 @@ public class Gift_Cards {
         gift_Cards();
         //Scrolling down
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,500)");
+        js.executeScript("window.scrollBy(0,1100)");
         Thread.sleep(3000);
         //Searching for and selecting desired button
         WebElement reload = driver.findElement(By.linkText("Reload Your Card"));
@@ -128,7 +128,7 @@ public class Gift_Cards {
         gift_Cards();
         //Scrolling down
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,500)");
+        js.executeScript("window.scrollBy(0,1500)");
         Thread.sleep(3000);
         //Searching for and selecting desired button
         WebElement contact = driver.findElement(By.linkText("Contact Us"));
