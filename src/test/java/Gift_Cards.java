@@ -122,7 +122,7 @@ public class Gift_Cards {
     }
 
     @Test(priority = 5)
-    public void Test_5() throws InterruptedException {
+    public void contact_us() throws InterruptedException {
 
         //Initializing the gift card function to ensure we open proper window
         gift_Cards();
@@ -131,8 +131,8 @@ public class Gift_Cards {
         js.executeScript("window.scrollBy(0,500)");
         Thread.sleep(3000);
         //Searching for and selecting desired button
-        WebElement arch_Card = driver.findElement(By.linkText("Buy an Arch Card"));
-        arch_Card.click();
+        WebElement contact = driver.findElement(By.linkText("Contact Us"));
+        contact.click();
         Thread.sleep(3000);
 
 
