@@ -91,6 +91,50 @@
             <class
                     name="count_vars">
             </class>
+            <!--
+            <!-Class Career Page
+            <class name="Careers_Pages">
+                <methods>
+                    <include
+                            name="careers_link">
+                    </include>
+                    <include
+                            name="restaurant_jobs">
+                    </include>
+                    <include
+                            name="corporate_careers">
+                    </include>
+                    <include
+                            name="become_a_franchisee">
+                    </include>
+                    <include
+                            name="university_careers">
+                    </include>
+
+                </methods>
+            </class>
+
+            <!-Class Find Your Restaurant
+            <class name="Find_Your_Restaurant">
+                <methods>
+                    <include
+                            name="find_Your_Restaurant_Link">
+                    </include>
+                    <include
+                            name="searchField_Test">
+                    </include>
+                    <include
+                            name="filterServices_CheckBoxes_Test">
+                    </include>
+                    <include
+                            name="filterDistance_RadioFilters_Test">
+                    </include>
+                    <include
+                            name="drag_Map_test">
+                    </include>
+
+                </methods>
+            </class> -->
         </classes>
     </test>
 </suite>
