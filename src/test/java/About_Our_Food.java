@@ -65,6 +65,15 @@ public class About_Our_Food {
         WebElement learn_about_quality = driver.findElement(By.linkText("Learn More About Our Quality"));
         learn_about_quality.click();
         Thread.sleep(3000);
+        //Scrolling down the page
+        js.executeScript("window.scrollBy(0,1500)");
+        Thread.sleep(1500);
+        //Scrolling further down
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        Thread.sleep(1500);
+        //Scrolling back to the top
+        js.executeScript("window.scrollBy(0,0)");
+        Thread.sleep(1500);
 
     }
 
