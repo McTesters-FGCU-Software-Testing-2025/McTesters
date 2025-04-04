@@ -122,8 +122,6 @@ public class Gift_Cards {
         submit.click();
         Thread.sleep(1500);
 
-
-
     }
 
     @Test(priority = 3)
@@ -146,7 +144,9 @@ public class Gift_Cards {
         //Switching handles
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
-
+        //Selecting submit button
+        WebElement submit = driver.findElement(By.id("submit"));
+        submit.click();
 
 
     }
