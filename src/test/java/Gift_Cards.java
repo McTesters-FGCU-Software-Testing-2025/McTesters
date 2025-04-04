@@ -187,8 +187,13 @@ public class Gift_Cards {
         //Searching for and selecting desired button
         WebElement contact = driver.findElement(By.linkText("Contact Us"));
         contact.click();
-        Thread.sleep(3000);
-
+        Thread.sleep(1500);
+        //Attempting to submit a false request
+        js.executeScript("window.scrollBy(0,5000)");
+        Thread.sleep(1500);
+        WebElement submit = driver.findElement(By.className("submit-button"));
+        submit.click();
+        Thread.sleep(1500);
 
     }
 
