@@ -159,20 +159,28 @@ public class Gift_Cards {
         //Scrolling down
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,1100)");
-        Thread.sleep(3000);
+        Thread.sleep(1500);
         //Searching for and selecting desired button
         WebElement reload = driver.findElement(By.linkText("Reload Your Card"));
         reload.click();
-        Thread.sleep(3000);
+        Thread.sleep(1500);
         //Continuing to the next handle
         WebElement arch_Card2 = driver.findElement(By.linkText("Yes, Continue"));
         arch_Card2.click();
-        Thread.sleep(3000);
+        Thread.sleep(2500);
         //Switching handles
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
-
-
+        //Inputting test information
+        WebElement username = driver.findElement(By.id("j_username"));
+        username.sendKeys("Tester123");
+        WebElement password = driver.findElement(By.id("j_password"));
+        password.sendKeys("Tester123");
+        Thread.sleep(2000);
+        //Clicking login submit
+        WebElement submit = driver.findElement(By.id("loginSubmit"));
+        submit.click();
+        Thread.sleep(1500);
     }
 
     @Test(priority = 5)
