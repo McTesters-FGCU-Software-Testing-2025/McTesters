@@ -105,6 +105,13 @@ public class Gift_Cards {
         WebElement in_bulk = driver.findElement(By.linkText("Buy in Bulk"));
         in_bulk.click();
         Thread.sleep(3000);
+        //Continuing to the next handle
+        WebElement arch_Card2 = driver.findElement(By.linkText("Yes, Continue"));
+        arch_Card2.click();
+        Thread.sleep(3000);
+        //Switching handles
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
 
 
 
@@ -123,6 +130,13 @@ public class Gift_Cards {
         WebElement check_balance = driver.findElement(By.linkText("Check Your Balance"));
         check_balance.click();
         Thread.sleep(3000);
+        //Continuing to the next handle
+        WebElement arch_Card2 = driver.findElement(By.linkText("Yes, Continue"));
+        arch_Card2.click();
+        Thread.sleep(3000);
+        //Switching handles
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
 
 
 
@@ -141,6 +155,13 @@ public class Gift_Cards {
         WebElement reload = driver.findElement(By.linkText("Reload Your Card"));
         reload.click();
         Thread.sleep(3000);
+        //Continuing to the next handle
+        WebElement arch_Card2 = driver.findElement(By.linkText("Yes, Continue"));
+        arch_Card2.click();
+        Thread.sleep(3000);
+        //Switching handles
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
 
 
     }
