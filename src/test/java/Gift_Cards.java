@@ -112,6 +112,15 @@ public class Gift_Cards {
         //Switching handles
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
+        //Checking the approve box
+        WebElement check_box = driver.findElement(By.id("arch_terms_conditions-1"));
+        check_box.click();
+        js.executeScript("window.scrollBy(0,700)");
+        Thread.sleep(1500);
+        //Submitting request
+        WebElement submit = driver.findElement(By.id("register_submit"));
+        submit.click();
+        Thread.sleep(1500);
 
 
 
