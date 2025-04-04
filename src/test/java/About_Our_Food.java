@@ -91,6 +91,15 @@ public class About_Our_Food {
         WebElement learn_about_food = driver.findElement(By.linkText("Learn More About Our Ingredients"));
         learn_about_food.click();
         Thread.sleep(3000);
+        //Scrolling down the page
+        js.executeScript("window.scrollBy(0,1500)");
+        Thread.sleep(1500);
+        //Scrolling further down
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        Thread.sleep(1500);
+        //Scrolling back to the top
+        js.executeScript("window.scrollBy(0,0)");
+        Thread.sleep(1500);
 
     }
 
@@ -106,7 +115,15 @@ public class About_Our_Food {
         WebElement foodPhilosophy = driver.findElement(By.cssSelector("a.cmp-teaser__action-link[href='/us/en-us/about-our-food/our-food-philosophy.html']"));
         foodPhilosophy.click();
         Thread.sleep(3000);
-
+        //Scrolling down the page
+        js.executeScript("window.scrollBy(0,1500)");
+        Thread.sleep(1500);
+        //Scrolling further down
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        Thread.sleep(1500);
+        //Scrolling back to the top
+        js.executeScript("window.scrollBy(0,0)");
+        Thread.sleep(1500);
 
 
     }
@@ -123,7 +140,16 @@ public class About_Our_Food {
         WebElement nutritionCalculator = driver.findElement(By.cssSelector("a.cmp-teaser__action-link[href='/us/en-us/about-our-food/nutrition-calculator.html']"));
         nutritionCalculator.click();
         Thread.sleep(3000);
-
+        //Scrolling down the page
+        js.executeScript("window.scrollBy(0,700)");
+        Thread.sleep(2500);
+        //Selecting an option on the menu
+        WebElement mcnuggets_1 = driver.findElement(By.xpath("//button[.//span[contains(text(), 'McNuggets')]]"));
+        mcnuggets_1.click();
+        Thread.sleep(1500);
+        WebElement mcnuggets_2 = driver.findElement(By.xpath("//button[.//span[contains(text(), 'McNuggets')]]"));
+        mcnuggets_2.click();
+        Thread.sleep(1500);
 
     }
 
