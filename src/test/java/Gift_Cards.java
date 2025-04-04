@@ -1,12 +1,15 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.*;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebDriver;
+
+import java.util.ArrayList;
 
 //8 classes, 5 methods/test per class.
 // Running the testng.xml to test our methods
@@ -39,7 +42,7 @@ public class Gift_Cards {
     public void afterMethod() {
         System.out.println("Method [" + ( count_vars.method_Count ) + "]: Complete");
         //This should close our driver before the next round
-        driver.close();
+        driver.quit();
     }
 
     @AfterClass
@@ -53,17 +56,38 @@ public class Gift_Cards {
     }
 
     @Test(priority = 1)
-    public void Test_1() throws InterruptedException {
+    public void archCard() throws InterruptedException {
         //Initializing the gift card function to ensure we open proper window
         gift_Cards();
         //Scrolling down
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
-        Thread.sleep(3000);
         //Searching for and selecting desired button
         WebElement arch_Card = driver.findElement(By.linkText("Buy an Arch Card"));
         arch_Card.click();
+        //Continuing to the next handle
+        WebElement arch_Card2 = driver.findElement(By.linkText("Yes, Continue"));
+        arch_Card2.click();
         Thread.sleep(3000);
+        //Switching handles
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
+        //Selecting a gift card
+        WebElement select_Card = driver.findElement(By.xpath("//img[@alt='Physical Grimace Gift Card']") );
+        select_Card.click();
+        Thread.sleep(1500);
+        //Finding the dropdown by ID and selecting an amount
+        Select amountDropdown = new Select(driver.findElement(By.id("giftcard-amount-2610")));
+        amountDropdown.selectByVisibleText("$10");
+        //Adding card to the cart
+        WebElement add_Card = driver.findElement(By.id("product-addtocart-button"));
+        add_Card.click();
+        Thread.sleep(1500);
+        //Proceeding to the to shopping cart
+        WebElement cart = driver.findElement(By.id("top-cart-btn-checkout"));
+        cart.click();
+        Thread.sleep(5000);
+
     }
 
 
