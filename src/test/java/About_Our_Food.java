@@ -165,7 +165,20 @@ public class About_Our_Food {
         WebElement foodExperts = driver.findElement(By.cssSelector("a.cmp-teaser__action-link[href='/us/en-us/about-our-food/meet-our-food-experts.html']"));
         foodExperts.click();
         Thread.sleep(3000);
-
+        //Scrolling down the page
+        js.executeScript("window.scrollBy(0,1500)");
+        //Clicking "Meet Our Chefs"
+        WebElement meet_chefs = driver.findElement(By.className("cmp-teaser__action-link"));
+        meet_chefs.click();
+        //Scrolling down the page
+        js.executeScript("window.scrollBy(0,1500)");
+        Thread.sleep(1500);
+        //Scrolling further down
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        Thread.sleep(1500);
+        //Scrolling back to the top
+        js.executeScript("window.scrollBy(0,0)");
+        Thread.sleep(1500);
 
     }
 
