@@ -75,13 +75,13 @@
                             name="currentURL">
                     </include>
                     <include
-                            name="">
+                            name="num_of_pics">
                     </include>
                     <include
-                            name="">
+                            name="load_time">
                     </include>
                     <include
-                            name="">
+                            name="cookie_counter">
                     </include>
 
                 </methods>
@@ -135,6 +135,47 @@
 
                 </methods>
             </class> -->
+
+            <class name ="About_Our_Food">
+                <methods>
+                    <include
+                        name = "quality">
+                    </include>
+                    <include
+                            name = "food">
+                    </include>
+                    <include
+                            name = "food_philosophy">
+                    </include>
+                    <include
+                            name = "nutrition_Calculator">
+                    </include>
+                    <include
+                            name = "food_Experts">
+                    </include>
+                </methods>
+            </class>
+
+            <class name ="Gift_Cards">
+                <methods>
+                    <include
+                            name = "archCard">
+                    </include>
+                    <include
+                            name = "bulk">
+                    </include>
+                    <include
+                            name = "balance">
+                    </include>
+                    <include
+                            name = "reload_your_card">
+                    </include>
+                    <include
+                            name = "contact_us">
+                    </include>
+
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
