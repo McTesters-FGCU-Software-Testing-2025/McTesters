@@ -6,8 +6,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Cookie;
 
 import java.util.List;
+import java.util.Set;
 
 //8 classes, 5 methods/test per class.
 // Running the testng.xml to test our methods
@@ -102,29 +104,47 @@ public class Website_Statistics {
     }
 
     @Test(priority = 3)
-    public void Test_3() throws InterruptedException {
+    public void num_of_pics() throws InterruptedException {
 
-        System.out.println("Hello World_3");
-        Thread.sleep(3000);
+        //Listing the amount of pictures on the page
+        driver.get("https://www.mcdonalds.com/us/en-us.html");
+        //Creating a list to hold number of images
+        List<WebElement> images = driver.findElements(By.tagName("img"));
+        int imageCount = images.size();
+        //Printing out the number of images on the page
+        System.out.println("Number of images found: " + imageCount);
 
 
 
     }
 
     @Test(priority = 4)
-    public void Test_4() throws InterruptedException {
+    public void load_time() throws InterruptedException {
 
-        System.out.println("Hello World_4");
-        Thread.sleep(3000);
+        //Page Load time
+        //Creating variables for start & stop time (like a stop watch)
+        long startTime = System.currentTimeMillis();
+        //Loading the page
+        driver.get("https://www.mcdonalds.com/us/en-us.html");
+        long endTime = System.currentTimeMillis();
+        //Calculating load time by subtracting the two recorded times
+        long loadTime = endTime - startTime;
+        //Printing out the load time
+        System.out.println("Loading time in seconds: " + loadTime);
 
 
     }
 
     @Test(priority = 5)
-    public void Test_5() throws InterruptedException {
+    public void cookie_counter() throws InterruptedException {
 
-        System.out.println("Hello World_5");
-        Thread.sleep(3000);
+        //Cookie count
+        driver.get("https://www.mcdonalds.com/us/en-us.html");
+        //Creating a set to hold our number of cookies
+        Set<Cookie> cookies = driver.manage().getCookies();
+        int cookieCount = cookies.size();
+        //Printing out total amount of cookies
+        System.out.println("Number of cookies found: " + cookieCount);
 
 
     }

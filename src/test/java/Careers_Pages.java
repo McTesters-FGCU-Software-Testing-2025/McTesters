@@ -106,14 +106,14 @@ public class Careers_Pages {
         // creating an action to use to scroll.
         Actions actions = new Actions(driver);
 
-        // i have Scroll down using repeated PAGE_DOWN keypresses since this page is built on react, and
+        // i have to Scroll down using repeated PAGE_DOWN keypresses since this page is built on react, and
         //i have been having trouble with the scroll command.
         for (int i = 0; i < 20; i++) {
             actions.sendKeys(Keys.PAGE_DOWN).perform();
             Thread.sleep(300); // adjust timing for smoother scroll
         }
 
-        Thread.sleep(2000); // optional: pause to visually confirm you're at bottom
+        Thread.sleep(2000); 
         System.out.println("Test Complete");
     }
 
