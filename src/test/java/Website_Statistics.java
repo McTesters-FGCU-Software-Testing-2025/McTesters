@@ -6,8 +6,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Cookie;
 
 import java.util.List;
+import java.util.Set;
 
 //8 classes, 5 methods/test per class.
 // Running the testng.xml to test our methods
@@ -134,9 +136,15 @@ public class Website_Statistics {
     }
 
     @Test(priority = 5)
-    public void Test_5() throws InterruptedException {
+    public void cookie_counter() throws InterruptedException {
 
         //Cookie count
+        driver.get("https://www.mcdonalds.com/us/en-us.html");
+        //Creating a set to hold our number of cookies
+        Set<Cookie> cookies = driver.manage().getCookies();
+        int cookieCount = cookies.size();
+        //Printing out total amount of cookies
+        System.out.println("Number of cookies found: " + cookieCount);
 
 
     }
