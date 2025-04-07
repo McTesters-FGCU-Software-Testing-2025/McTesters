@@ -91,6 +91,7 @@
             <class
                     name="count_vars">
             </class>
+
             <!--
             <!-Class Career Page
             <class name="Careers_Pages">
@@ -174,6 +175,26 @@
                             name = "contact_us">
                     </include>
 
+                </methods>
+            </class>
+
+            <class name ="Community_Overview">
+                <methods>
+                    <include
+                            name = "communityFooterLink">
+                    </include>
+                    <include
+                            name = "r_m_House_Charities">
+                    </include>
+                    <include
+                            name = "scholarships">
+                    </include>
+                    <include
+                            name = "meetTheCrew">
+                    </include>
+                    <include
+                            name = "exploreOurDeals">
+                    </include>
                 </methods>
             </class>
         </classes>
