@@ -7,9 +7,9 @@
 
         <classes>
 
-            <!--
 
-            <!-Class 1
+
+            <!--Class 1-->
             <class name="Main_Navigation_Bar">
                 <methods>
                     <include
@@ -39,12 +39,11 @@
                     </include>
                     <include
                             name="McGiftCard">
->>>>>>> 8f9552a25eacfbfc39e1503563acd7141a6e4acc
                     </include>
                 </methods>
             </class>
 
-            <!-Class 2
+            <!--Class 2-->
             <class name="Dropdown_Mc_Menu">
                           <methods>
                               <include
@@ -64,7 +63,7 @@
                               </include>
                           </methods>
                       </class>
-            -->
+
             <!--Class 3-->
             <class name="Website_Statistics">
                 <methods>
@@ -92,8 +91,8 @@
                     name="count_vars">
             </class>
 
-            <!--
-            <!-Class Career Page
+
+            <!--Class Career Page-->
             <class name="Careers_Pages">
                 <methods>
                     <include
@@ -115,7 +114,7 @@
                 </methods>
             </class>
 
-            <!-Class Find Your Restaurant
+            <!--Class Find Your Restaurant-->
             <class name="Find_Your_Restaurant">
                 <methods>
                     <include
@@ -135,7 +134,8 @@
                     </include>
 
                 </methods>
-            </class> -->
+            </class>
+
 
             <class name ="About_Our_Food">
                 <methods>

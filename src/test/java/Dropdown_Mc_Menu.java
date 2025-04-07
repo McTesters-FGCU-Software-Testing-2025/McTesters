@@ -92,7 +92,7 @@ public class Dropdown_Mc_Menu {
         brake_fast.click();
         Thread.sleep(3000);
 
-        WebElement hashBrown = driver.findElement(By.id("product-category-a20918d941-836c157b4d_image"));
+        WebElement hashBrown = driver.findElement(By.linkText("Hash Browns"));
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView()", hashBrown);
