@@ -72,15 +72,18 @@ public class Gift_Cards {
         //Switching handles
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
+        Thread.sleep(3000);
         //Selecting a gift card
         WebElement select_Card = driver.findElement(By.xpath("//img[@alt='Physical Grimace Gift Card']") );
         select_Card.click();
         Thread.sleep(1500);
         //Finding the dropdown by ID and selecting an amount
         Select amountDropdown = new Select(driver.findElement(By.id("giftcard-amount-2610")));
+        Thread.sleep(1500);
         amountDropdown.selectByVisibleText("$10");
         //Adding card to the cart
         WebElement add_Card = driver.findElement(By.id("product-addtocart-button"));
+        Thread.sleep(1500);
         add_Card.click();
         Thread.sleep(1500);
         //Proceeding to the to shopping cart
@@ -112,6 +115,7 @@ public class Gift_Cards {
         //Switching handles
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
+        Thread.sleep(1500);
         //Checking the approve box
         WebElement check_box = driver.findElement(By.id("arch_terms_conditions-1"));
         check_box.click();
@@ -173,8 +177,10 @@ public class Gift_Cards {
         driver.switchTo().window(tabs.get(1));
         //Inputting test information
         WebElement username = driver.findElement(By.id("j_username"));
+        Thread.sleep(1500);
         username.sendKeys("Tester123");
         WebElement password = driver.findElement(By.id("j_password"));
+        Thread.sleep(1500);
         password.sendKeys("Tester123");
         Thread.sleep(2000);
         //Clicking login submit

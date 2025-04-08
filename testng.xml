@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/NashW/IdeaProjects/Test/src">
 
-                                                <!--Comment out the areas to test your classes so you're not waiting-->
+        <!--Comment out the areas to test your classes so you're not waiting-->
 
         <classes>
 
@@ -45,24 +45,24 @@
 
             <!--Class 2-->
             <class name="Dropdown_Mc_Menu">
-                          <methods>
-                              <include
-                                      name="McValue">
-                              </include>
-                              <include
-                                      name="Breakfast">
-                              </include>
-                              <include
-                                      name="Beverages">
-                              </include>
-                              <include
-                                      name="Happy_Meal">
-                              </include>
-                              <include
-                                      name="SweetTreats">
-                              </include>
-                          </methods>
-                      </class>
+                <methods>
+                    <include
+                            name="McValue">
+                    </include>
+                    <include
+                            name="Breakfast">
+                    </include>
+                    <include
+                            name="Beverages">
+                    </include>
+                    <include
+                            name="Happy_Meal">
+                    </include>
+                    <include
+                            name="SweetTreats">
+                    </include>
+                </methods>
+            </class>
 
             <!--Class 3-->
             <class name="Website_Statistics">
@@ -140,7 +140,7 @@
             <class name ="About_Our_Food">
                 <methods>
                     <include
-                        name = "quality">
+                            name = "quality">
                     </include>
                     <include
                             name = "food">
